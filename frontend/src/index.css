@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* InfraProof Design System - Industrial Dawn Aesthetic
+   Burnt orange → Pale sand → Off-white gradient system
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Core background - clean white */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 12%;
+
+    /* Cards - solid white with subtle warmth */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 12%;
+
+    /* Primary - darker burnt orange for contrast */
+    --primary: 22 65% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - neutral warm gray */
+    --secondary: 30 8% 94%;
+    --secondary-foreground: 220 15% 15%;
+
+    /* Muted - subtle warm gray */
+    --muted: 30 6% 96%;
+    --muted-foreground: 220 10% 40%;
+
+    /* Accent - amber highlight */
+    --accent: 28 55% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border - subtle neutral */
+    --border: 220 10% 88%;
+    --input: 220 10% 88%;
+    --ring: 22 65% 38%;
+
+    /* Sharp infrastructure radius - 4px */
+    --radius: 0.25rem;
+
+    /* Status colors */
+    --status-created: 35 50% 45%;
+    --status-running: 28 60% 45%;
+    --status-completed: 145 45% 35%;
+
+    /* Gradient stops - subtle, warm tint */
+    --gradient-start: 25 30% 92%;
+    --gradient-mid: 30 15% 96%;
+    --gradient-end: 0 0% 100%;
+
+    --sidebar-background: 35 20% 93%;
+    --sidebar-foreground: 25 10% 20%;
+    --sidebar-primary: 25 55% 45%;
+    --sidebar-primary-foreground: 35 33% 96%;
+    --sidebar-accent: 35 25% 88%;
+    --sidebar-accent-foreground: 25 10% 20%;
+    --sidebar-border: 30 15% 82%;
+    --sidebar-ring: 25 55% 45%;
+  }
+
+  .dark {
+    /* Dark mode - neutral charcoal with amber accents */
+    --background: 220 15% 8%;
+    --foreground: 30 10% 92%;
+
+    --card: 220 12% 12%;
+    --card-foreground: 30 10% 92%;
+
+    --popover: 220 12% 12%;
+    --popover-foreground: 30 10% 92%;
+
+    --primary: 28 55% 52%;
+    --primary-foreground: 220 15% 8%;
+
+    --secondary: 220 10% 16%;
+    --secondary-foreground: 30 10% 88%;
+
+    --muted: 220 10% 16%;
+    --muted-foreground: 30 8% 55%;
+
+    --accent: 28 50% 48%;
+    --accent-foreground: 220 15% 8%;
+
+    --destructive: 0 55% 45%;
+    --destructive-foreground: 30 10% 92%;
+
+    --border: 220 10% 20%;
+    --input: 220 10% 20%;
+    --ring: 28 55% 52%;
+
+    --status-created: 35 45% 55%;
+    --status-running: 28 55% 55%;
+    --status-completed: 145 40% 45%;
+
+    --gradient-start: 25 20% 14%;
+    --gradient-mid: 220 12% 10%;
+    --gradient-end: 220 15% 8%;
+
+    --sidebar-background: 25 12% 12%;
+    --sidebar-foreground: 35 20% 90%;
+    --sidebar-primary: 30 50% 55%;
+    --sidebar-primary-foreground: 25 15% 10%;
+    --sidebar-accent: 25 10% 18%;
+    --sidebar-accent-foreground: 35 20% 85%;
+    --sidebar-border: 25 10% 22%;
+    --sidebar-ring: 30 50% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Industrial dawn gradient background */
+.bg-gradient-dawn {
+  background: linear-gradient(
+    180deg,
+    hsl(var(--gradient-start)) 0%,
+    hsl(var(--gradient-mid)) 40%,
+    hsl(var(--gradient-end)) 100%
+  );
+}

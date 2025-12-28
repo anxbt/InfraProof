@@ -2,6 +2,22 @@
 
 **InfraProof is a verification layer that allows decentralized infrastructure operators to prove that off-chain execution actually happened, without requiring trust.**
 
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Problem Statement](#problem-statement)
+- [High-Level Architecture](#high-level-architecture)
+- [User Journey](#user-journey)
+- [What the Execution Logs Mean](#what-the-execution-logs-mean)
+- [Smart Contract Deployment](#smart-contract-deployment)
+- [Greenfield Storage](#greenfield-storage)
+- [Local & Testnet Deployment](#local--testnet-deployment)
+  - [Running Locally (Anvil)](#running-locally-anvil)
+  - [Deploying to BSC Testnet](#deploying-to-bsc-testnet)
+- [Design Principles](#design-principles)
+- [Future Work & Roadmap](#future-work--roadmap)
+- [How Judges Should Evaluate This Project](#how-judges-should-evaluate-this-project)
+
 ## Project Overview
 
 InfraProof addresses a fundamental challenge in decentralized physical infrastructure networks (DePIN): verifying that off-chain work was actually performed. When infrastructure operators claim to have executed compute tasks, sensor readings, or storage operations, there is currently no trustless way to verify these claims.
